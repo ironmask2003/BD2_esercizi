@@ -1,0 +1,24 @@
+Specifiche della classe Video
+
+------------------------------
+operazioni delle classi
+
+- num_visualizzazioni(): int >= 0:
+  pre-condizioni: nessuna
+  post-condizioni: 
+    - Sia Visualizzazioni l'insieme che contiene gli oggeti v:Visualizzazione tale che:
+      * (v, this):video_visual
+      Per ogni oggetto v:Visualizzazione in Visualizzazioni
+      result += v.numero_visual()
+
+-------------------------------
+Vincoli esterni
+
+-------------------------------
+FOL relativa alla classe
+
+F = {Video/1, Utente/1, pubblica/2, risposta/2}
+
+ALL u Utente(u) -> NOT EXIST v Video(v) and r Video(r) tale che:
+                  pubblica(u, v) and pubblica(u, r) and risposta(r, u)
+Per ogni utente non esistono due video pubblicati dall'utente tale che un video e' un video ripsosta dell'altro

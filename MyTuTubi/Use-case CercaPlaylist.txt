@@ -1,0 +1,6 @@
+Specifiche use-case CercaPlaylist
+
+CercaPlaylist(nome: String):
+  - pre-condizioni: EXIST p Playlist(p) tale che nome(p, nome)
+  - post-condizioni:
+    ALL p Plyalist(p) tale che nome(p, nome)

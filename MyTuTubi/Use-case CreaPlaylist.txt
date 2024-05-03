@@ -1,0 +1,13 @@
+Specifiche use-case CreaPlaylist
+
+CreaPlaylist_Pubblico(nome:String, istante:DataOra): Pubblico
+  - pre-condizioni: nessuna
+  - post-condizioni:
+    EXIST result Pubblico(result) tale che: nome(result, nome) and istante(result, nome)
+    !EXIST u Utente(u) tale che playlist_utente(u, result)
+
+CreaPlaylist_Privato(nome:String, creazione:DataOra): Privato
+  - pre-condizioni: nessuna
+  - post-condizioni:
+    EXIST result Privato(result) tale che: nome(result, nome) and istante(result, nome)
+    !EXIST u Utente(u) tale che playlist_utente(u, result)

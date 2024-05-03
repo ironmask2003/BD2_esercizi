@@ -1,0 +1,13 @@
+Specifiche use-case Commentare
+
+Commentare(testo: String): Commento
+  - pre-condizioni: ALL u Utente(u) --> EXIST v Visualizzazione(v) tale che ut_visual(v, u)
+  - post-condizioni: 
+    EXIST result Commento(result) tale che 
+      [ testo(testo, result) and istante(adesso, result) ] and
+      lascia_com(v, result)
+
+    viene creato l'oggetto result:Commento tale che:
+                    - result.testo = testo
+                    - result.istante = adesso
+    viene creato il link (restul, v): lascia_com

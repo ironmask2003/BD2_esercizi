@@ -1,0 +1,7 @@
+Specifiche use-case Registrazione
+
+registrazione(nome: String): Utente
+  - pre-condizioni: non esiste u:Utente tale che u.nome = nome
+  - post-condizioni: viene creato un oggetto u:Utente come result tale che:
+                    - reslut.nome = nome
+                    - result.data_reg = adesso

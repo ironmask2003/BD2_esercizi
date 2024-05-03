@@ -1,0 +1,12 @@
+Specfiche Use-case Lascia_valutazione
+
+Lascia_valutazione(valore: int 0.. 5):  Valutazione
+  - pre-condizioni: sia u:Utente l'attore che invoca l'azione Lascia_valutazione, 
+                    sia v:Visualizzazione tale che:
+                      - (u, v): ut_visual
+                    v.numero_visual() = 0
+                    and
+                    sia vid:Video tale che: (vid, v):video_visual and not pubblica(u, v)
+  - post-condizioni: result = viene creato un oggetto result tale che result:Valutazione tale che:
+                              result.valore = valore
+                    viene creato il link (result, v):lascia_val 

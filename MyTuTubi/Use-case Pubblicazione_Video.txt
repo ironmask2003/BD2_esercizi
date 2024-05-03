@@ -1,0 +1,22 @@
+Specifiche use-case Pubblicazione-Video
+
+Pubblicazione-Video(titolo: String, 
+                  descrizione: String, 
+                  durata_sec: int > 0, 
+                  nome_file: String,
+                  categoria: Categoria 
+                  tag: Tag [0..*]
+)
+  - pre-condizioni: nessuna
+  - post-condizioni: viene creato result:Video tale che:
+                    - result.titolo = titolo
+                    - result.descrizione = descrizione
+                    - result.durata_sec = durata_sec
+                    - result.nome_file = nome_file
+                    Viene creato il link (result, categoria): Categoria 
+                    Per ogni oggetto t:Tag in tag viene creato il link (result, t)
+
+                    Sia u:Utente l'attore che ha invocato Pubblicazione-Video, viene creato
+                    il link (u, result): pubblicazione
+
+

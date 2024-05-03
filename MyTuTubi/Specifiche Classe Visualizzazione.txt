@@ -1,0 +1,17 @@
+Specifiche della classe Visualizzazione
+
+-----------------------------
+operazioi di classe
+
+- valutazione_video(valutazione: int 0..5): int 0..5
+  pre-condizioni: sia u:Utente tale che (u, this):ut_visual e sia v tale che (this, v):video_visual
+                  non deve esistere (u, v): pubblicazione
+                  oppure
+                  sia u:Utente tale che (u, this):ut_visual, allora this.numero_visual() = 0
+  post-condizioni: result = valutazione 
+
+- numero_visual(): int >= 0
+  pre-condizioni: nessuna
+  post-condizioni: sia u:Utente tale che (u, this):ut_visual e v:Video tale che (this, v):video_visual
+                  result = numero di oggetti visual:Visualizzazione tale che 
+                            (visual, u):ut_visual e visual != this
