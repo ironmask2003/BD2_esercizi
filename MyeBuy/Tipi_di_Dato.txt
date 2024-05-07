@@ -1,3 +1,4 @@
 Tipi di dato
 
 Condizioni_og: ["ottimo", "buono", "discreto", "da_sistemare"] 1..1
+TipoPopolarità: ["bassa", "media", "alta"] 1..1
