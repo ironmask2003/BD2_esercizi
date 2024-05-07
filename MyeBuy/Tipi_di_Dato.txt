@@ -1,0 +1,3 @@
+Tipi di dato
+
+Condizioni_og: ["ottimo", "buono", "discreto", "da_sistemare"] 1..1
